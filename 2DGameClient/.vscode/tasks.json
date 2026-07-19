@@ -1,0 +1,12 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build 2D Game",
+            "type": "shell",
+            "command": "javac -d bin -cp 'bin;res' src/main/*.java src/entity/*.java",
+            "group": "build",
+            "problemMatcher": "$javac"
+        }
+    ]
+}

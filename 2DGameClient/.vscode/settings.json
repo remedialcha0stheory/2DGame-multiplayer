@@ -1,0 +1,14 @@
+{
+    "java.project.sourcePaths": [
+        "src",
+        "res"
+    ],
+    "java.project.outputPath": "bin",
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar"
+    ],
+    "code-runner.executorMap": {
+        "java": "cd $workspaceRoot; javac -d bin -cp \"bin;res\" src/main/*.java src/entity/*.java; java -cp \"bin;res\" main.Main"
+    },
+    "code-runner.runInTerminal": true
+}

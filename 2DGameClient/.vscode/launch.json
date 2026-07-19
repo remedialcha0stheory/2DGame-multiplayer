@@ -1,0 +1,18 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch 2D Game",
+            "request": "launch",
+            "mainClass": "main.Main",
+            "cwd": "${workspaceFolder}",
+            "preLaunchTask": "Build 2D Game",
+            "classPaths": [
+                "${workspaceFolder}/bin",
+                "${workspaceFolder}/res"
+            ],
+            "console": "integratedTerminal"
+        }
+    ]
+}
