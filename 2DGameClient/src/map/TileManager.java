@@ -116,7 +116,6 @@ public class TileManager {
                 mapTileNum[i][j] = s.nextInt();
             }
         }
-        // System.out.println(mapTileNum[21][23]);
     }
 
     public void draw(Graphics2D g){
@@ -158,7 +157,6 @@ public class TileManager {
             marginX = 0;
             endX--;
         }
-        // System.out.println(X1);
 
         for(int i=X1; i<X1+endX; i++){ // 15 -> 31
             for(int j=Y1; j<Y1+endY; j++){ // 15 -> 27 

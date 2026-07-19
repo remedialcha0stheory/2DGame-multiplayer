@@ -1,7 +1,5 @@
 package entity;
 
-import java.awt.Rectangle;
-
 import main.GamePanel;
 import main.KeyHandler;
 
@@ -16,7 +14,6 @@ public class Player extends Entity{
         super(gamePanel);
         this.keyHandler = keyHandler;
         this.player = true;
-        this.solidArea = new Rectangle(RECT_X, RECT_Y, RECT_WIDTH, RECT_HEIGHT);
         maxLife = 10;
         life = maxLife;
 

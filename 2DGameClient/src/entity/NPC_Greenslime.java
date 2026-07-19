@@ -1,17 +1,10 @@
 package entity;
 
-import java.awt.Rectangle;
-
 import main.GamePanel;
 
 public class NPC_Greenslime extends NPC {
     public NPC_Greenslime(GamePanel gamePanel, int x, int y) {
         super(gamePanel);
-        solidArea = new Rectangle(3, 18, 42, 30);
-        RECT_X = 3;
-        RECT_Y = 18;
-        RECT_WIDTH = 42;
-        RECT_HEIGHT = 30;
         maxLife = 8;
         speed = 1;
         life = maxLife;

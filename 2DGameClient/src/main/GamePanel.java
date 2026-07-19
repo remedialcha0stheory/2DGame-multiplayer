@@ -52,7 +52,6 @@ public class GamePanel extends JPanel implements Runnable {
     public Random randomGenerator = new Random();
 
     public KeyHandler keyHandler = new KeyHandler(this);
-    public CollisionChecker collisionChecker = new CollisionChecker(this);
     public TileManager tileManager;
     public Player player;
     public int maxFPS = 60;

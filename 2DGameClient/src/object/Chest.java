@@ -3,8 +3,6 @@ package object;
 import java.io.IOException;
 
 import javax.imageio.ImageIO;
-
-import entity.Player;
 import main.GamePanel;
 import util.Utility;
 
@@ -21,10 +19,5 @@ public class Chest extends Object {
         }
         worldX = x;
         worldY = y;
-    }
-
-    public boolean interact(Player player){
-        player.taskCompleted = true;
-        return true;
     }
 }

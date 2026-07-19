@@ -4,7 +4,6 @@ import java.awt.AlphaComposite;
 import java.awt.BasicStroke;
 import java.awt.Color;
 import java.awt.Graphics2D;
-import java.awt.Rectangle;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 
@@ -44,21 +43,11 @@ public class Entity {
     public GamePanel gamePanel;
     public int running = 1;
 
-    public Rectangle solidArea;
-    public int RECT_X = 10;
-    public int RECT_Y = 16;
-    public int RECT_WIDTH = 28;
-    public int RECT_HEIGHT = 28;
-    public Rectangle attackArea;
-
     protected boolean player = false;
 
     public Entity(GamePanel gamePanel){
         this.gamePanel = gamePanel;
         runNum = 1;
-        id = gamePanel.entity_id++;
-        solidArea = new Rectangle(0, 0, gamePanel.tileSize, gamePanel.tileSize);
-        attackArea = new Rectangle();
     }
 
     public void update(){
@@ -76,13 +65,6 @@ public class Entity {
 
     public void setId(int id){
         this.id = id;
-    }
-
-    protected void setDefaultSolidArea(){
-        this.solidArea.x = RECT_X;
-        this.solidArea.y = RECT_Y;
-        // this.solidArea.width = RECT_WIDTH;
-        // this.solidArea.height = RECT_HEIGHT;
     }
 
     protected void updateRunCounter(){
@@ -225,60 +207,5 @@ public class Entity {
 
     public void collide(Entity e){
         
-    }
-
-    public void damage(int damage){
-        if(damage==0) return;
-        if(this.invincibleAfterCollision==false){
-            this.life-=damage;
-            this.invincibleAfterCollision = true;
-        }
-    }
-
-    public void attack(){
-        setAttackArea();
-        if(attackCounter <= 5){
-            attackNum = 1;
-        }
-        else if(attackCounter <= 25){
-            attackNum = 2;
-        }
-        else{
-            attackCounter = 0;
-            attacking = false;
-        }
-        attackCounter++;
-    }
-
-    private void setAttackArea(){
-        switch(direction){
-            case "up":
-                attackArea.x = 14;
-                attackArea.y = -40;
-                attackArea.width = 20;
-                attackArea.height = 40;
-                break;
-            
-            case "down":
-                attackArea.x = 14;
-                attackArea.y = 48;
-                attackArea.width = 20;
-                attackArea.height = 40;
-                break;
-            
-            case "left":
-                attackArea.x = -40;
-                attackArea.y = -14;
-                attackArea.width = 40;
-                attackArea.height = 20;
-                break;
-            
-            case "right":
-                attackArea.x = 48;
-                attackArea.y = -14;
-                attackArea.width = 40;
-                attackArea.height = 20;
-                break;
-        }
     }
 }

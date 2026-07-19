@@ -20,7 +20,7 @@ public class Network {
     GamePanel gamePanel;
     public Socket tcpSocket;
     public DatagramSocket udpSocket;
-    static final String SERVER_IP = "192.168.1.28";
+    static final String SERVER_IP = "192.168.1.20";
 
     public ConcurrentLinkedQueue<OutgoingPacket> outQueue = new ConcurrentLinkedQueue<>();
     public ConcurrentLinkedQueue<IncomingPacket> inQueue = new ConcurrentLinkedQueue<>();

@@ -3,7 +3,6 @@ package object;
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 
-import entity.Player;
 import main.GamePanel;
 
 public abstract class Object {
@@ -12,8 +11,6 @@ public abstract class Object {
     boolean collision = false;
     int worldX, worldY;
     GamePanel gamePanel;
-
-    abstract public boolean interact(Player player);
 
     public Object(GamePanel gamePanel){
         this.gamePanel = gamePanel;
