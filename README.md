@@ -1,6 +1,6 @@
 Compiling and running the client:
 
-javac -d bin -cp "bin;res" src\main\\*.java src\entity\\*.java src\map\\*.java src\network\\*.java src\object\\*.java src\structs\\*.java src\util\\*.java
+javac -d bin -cp "bin;res" src\main\*.java src\entity\*.java src\map\*.java src\network\*.java src\object\*.java src\structs\*.java src\util\*.java
 
 java -cp "bin;res" main.Main   
 
